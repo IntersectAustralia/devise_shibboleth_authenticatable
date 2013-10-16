@@ -4,14 +4,14 @@ module Devise
   module Strategies
     class ShibbolethAuthenticatable < Authenticatable
       def valid?
-         request.env['eppn']
+         request.headers['eppn']
       end
 
       def authenticate!
-	if resource = mapping.to.authenticate_with_shibboleth(request.env)
-	  success!(resource)
-        else 
-	  fail!(:invalid)
+        if resource = mapping.to.authenticate_with_shibboleth(request.headers)
+	        success!(resource)
+        else
+	        fail!(:invalid)
         end
       end
 

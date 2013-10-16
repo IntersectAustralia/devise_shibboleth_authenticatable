@@ -29,11 +29,11 @@ begin
     gemspec.name = "devise_shibboleth_authenticatable"
     gemspec.summary = "Shibboleth authentication module for Devise"
     gemspec.description = "Devise Shibboleth Authenticatable is a Shibboleth based authentication strategy for the [Devise](http://github.com/plataformatec/devise) authentication framework."
-    gemspec.email = "joe.george@osumc.edu"
-    gemspec.homepage = "http://github.com/jgeorge300/devise_shibboleth_authenticatable"
-    gemspec.authors = ["Joe George"]
-    gemspec.add_runtime_dependency "devise", "> 2.0.0"
-    gemspec.version = "0.6.0"
+    gemspec.email = "shuqian@intersect.org.au"
+    gemspec.homepage = "http://github.com/IntersectAustralia/devise_shibboleth_authenticatable"
+    gemspec.authors = ["Joe George", "Shuqian Hon"]
+    gemspec.add_runtime_dependency "devise", ">= 1.5.4"
+    gemspec.version = "0.6.1"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

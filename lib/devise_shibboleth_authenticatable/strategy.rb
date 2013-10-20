@@ -4,12 +4,16 @@ module Devise
   module Strategies
     class ShibbolethAuthenticatable < Authenticatable
       def valid?
-         request.headers['eppn']
+        params[:user].nil? && request.headers['email'].present? && mapping.to.find_by_email(request.headers['email']).present?
       end
 
       def authenticate!
         if resource = mapping.to.authenticate_with_shibboleth(request.headers)
-	        success!(resource)
+          if resource.active_for_authentication?
+            success!(resource, :signed_in)
+          else
+            fail!(:inactive)
+          end
         else
 	        fail!(:invalid)
         end

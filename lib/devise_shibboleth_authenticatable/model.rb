@@ -28,7 +28,7 @@ module Devise
         def authenticate_with_shibboleth(headers)
 
           auth_key = self.authentication_keys.first
-          auth_key_value = (self.case_insensitive_keys || []).include?(auth_key) ? headers['eppn'].downcase : headers['eppn']
+          auth_key_value = (self.case_insensitive_keys || []).include?(auth_key) ? headers['email'].downcase : headers['email']
 
           resource = where(auth_key => auth_key_value).first
 

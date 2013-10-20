@@ -33,7 +33,7 @@ begin
     gemspec.homepage = "http://github.com/IntersectAustralia/devise_shibboleth_authenticatable"
     gemspec.authors = ["Joe George", "Shuqian Hon"]
     gemspec.add_runtime_dependency "devise", ">= 1.5.4"
-    gemspec.version = "0.6.1"
+    gemspec.version = "0.6.2"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

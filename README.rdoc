@@ -2,8 +2,10 @@
 
 Devise Shibboleth Authenticatable is a Shibboleth based authentication strategy for the Devise[http://github.com/plataformatec/devise] authentication framework.
 
+This is customised for Intersect Australia.
+
 == Prerequisites
-* devise ~> 2.0.0 (which requires rails ~> 3.1)
+* devise ~> 1.5.4 (which requires rails ~> 3.1)
 
 == Usage
 In the Gemfile for your application:
@@ -12,7 +14,7 @@ In the Gemfile for your application:
 
 To get the latest version, pull directly from github instead of the gem:
 
-    gem "devise_shibboleth_authenticatable", :git => "git://github.com/jgeorge300/devise_shibboleth_authenticatable.git"
+    gem "devise_shibboleth_authenticatable", :git => "git://github.com/IntersectAustralia/devise_shibboleth_authenticatable.git"
 
 == Setup
 Run the rails generators for devise (please check the devise[http://github.com/plataformatec/devise] documents for further instructions)
@@ -40,7 +42,7 @@ In configuration 'config/shibboleth.yml' :
   * The URL to your Shibboleth IdP
 
 == Contributing to devise_shibboleth_authenticatable
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project

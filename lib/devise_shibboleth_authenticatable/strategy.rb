@@ -4,7 +4,7 @@ module Devise
   module Strategies
     class ShibbolethAuthenticatable < Authenticatable
       def valid?
-        params[:user].nil? && request.headers['email'].present? && mapping.to.find_by_email(request.headers['email']).present?
+        params[:user].nil? && request.headers['email'].present? && mapping.to.find_for_authentication(email: request.headers['email']).present?
       end
 
       def authenticate!
